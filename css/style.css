@@ -1,0 +1,647 @@
+
+/* --------------small/global---------*/
+
+* {
+  box-sizing: border-box
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Corbel;
+  font-weight: lighter;
+}
+
+/* begin van header */
+
+header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background:url("../img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+ list-style: none;
+ display: flex;
+ flex-grow: 1;
+ padding: 1em;
+ justify-content: center;
+ background: #e8c694;
+ transition: background-color .5s;
+
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: #BE8227;
+  transition: background-color .5s;
+}
+
+.menutoggle {
+  display: flex;
+  flex-flow: row;
+  align-items: left;
+  padding: 10px;
+  background-color: #C09F80;
+}
+
+.menutoggle a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+
+.active {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  transition-duration:  0.6s;
+}
+
+.inactive {
+  display: none;
+}
+
+.container1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "logo"
+  "openingstijden"
+}
+
+.logo {
+  grid-area: logo;
+  text-shadow: 3px 3px black;
+  /* margin: 10%; */
+}
+
+.logo h2 {
+  color: white;
+  font-size: 70px;
+
+}
+
+.openingstijden {
+  grid-area: openingstijden;
+  background-color: rgb(1232, 198, 148, 0.7);
+  margin: 10% 15%;
+  /* padding: 10% 0; */
+  color: black;
+  height: 100%;
+}
+
+/*einde van de header*/
+
+.container2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat (1, 1fr [col-start]);
+}
+
+.head {
+  background: #e8c694;
+}
+
+.item {
+  height: 400px;
+}
+
+.box1 {
+  background: #BE8227;
+  color: white;
+  padding: 5%;
+}
+
+.box1-1 {
+  display: none;
+}
+
+.box2 {
+  grid-column: 1;
+  text-align: center;
+}
+
+.box2 h2, .box3 h2, .box4 h2, .box5 h2{
+  color: #BE8227;
+  background-color: #e8c694;
+}
+
+.box2-1 {
+  grid-column: 1;
+  background-image: url("../img/onzeKazen/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box2-2 {
+  display: none;
+}
+
+.box2-3 {
+  display: none;
+}
+
+.box3 {
+  grid-column: 1;
+  text-align: center;
+}
+
+.box3-1 {
+display: none;
+}
+
+.box3-2 {
+    grid-column: 1;
+  background-image: url("../img/kaasRecepten/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.box3-3 {
+  display: none;
+}
+
+.box4 {
+  grid-column: 1;
+  text-align: center;
+
+}
+
+.box4-1 {
+  grid-column: 1;
+  background-image: url("../img/onsTeam/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box4-2 {
+  display: none;
+}
+
+
+.box5 {
+  grid-column: 1;
+  text-align: center;
+}
+
+.box5-1 {
+  grid-column: 1;
+  background-image: url("../img/binnenKijken/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.box5-2 {
+  display: none;
+}
+
+.box5-3 {
+  display: none;
+}
+
+/*footer*/
+
+
+footer {
+  width: 100%;
+  height: 30%;
+  background-color: #e8c694;
+  border-top: 3px solid black;
+  text-align: center;
+}
+footer h3{
+  color: #BE8227;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.foot {
+  padding-left: 8%;
+}
+
+.foot1 {
+  grid-row: 1;
+}
+
+.foot1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.foot1:hover {
+  background-color: grey;
+  transition: background-color .5s;
+}
+
+.foot2 {
+  grid-row: 2;
+}
+
+.foot2 a {
+  color: black;
+  text-decoration: none;
+}
+
+.foot2:hover {
+  background-color: grey;
+  transition: background-color .5s;
+}
+
+.foot3 {
+  grid-row: 3;
+}
+
+.foot3 a {
+  color: black;
+  text-decoration: none;
+}
+
+.foot3:hover {
+  background-color: grey;
+  transition: background-color .5s;
+}
+
+/*-----------end of small---------*/
+
+/*-----------medium------------*/
+
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+   .menutoggle{
+    display: none;
+  }
+  .active, .inactive{
+    display: unset;
+  }
+
+  header{
+     background-image: url("../img/deWinkel/img1.jpg");
+  }
+
+  .logo h2{
+    display: none;
+  }
+
+ nav ul {
+    flex-flow: row;
+  }
+
+  nav ul li {
+  font-size: 85%;
+  }
+
+  .openingstijden{
+    margin-top: 50%;
+  }
+
+  .item {
+    height: 250px;
+    width: 100%;
+  }
+
+  .container2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat (2, 1fr [col-start]);
+  }
+
+  .box1 {
+    grid-column: 1 / span 2;
+  }
+
+  .box1-1 {
+    display: none;
+  }
+
+  .box2 {
+    grid-column: 1 / span 2;
+  }
+
+  .box2-1 {
+    display: grid;
+    grid-column: 1;
+  }
+
+  .box2-2 {
+    padding: 5%;
+    background: #BE8227;
+    color: white;
+    display: grid;
+    grid-column: 2;
+  }
+
+
+
+
+  .box3 {
+    grid-column: 1 / span 2;
+    }
+
+  .box3-1 {
+        padding: 5%;
+    background: #BE8227;
+    color: white;
+    display: grid;
+    grid-column: 1;
+  }
+
+  .box3-2 {
+    display: grid;
+    grid-column: 2;
+    background-image: url("../img/kaasRecepten/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box3-3{
+    display: none;
+  }
+
+  .box4 {
+    grid-column: 1 / span 2;
+  }
+
+  .box4-1 {
+    display: grid;
+    grid-column: 1;
+  }
+
+  .box4-2 {
+    display: grid;
+    grid-column: 2;
+    background-image: url("../img/onsTeam/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box5 {
+    grid-column: 1 / span 2;
+  }
+
+  .box5-1 {
+    display: grid;
+    grid-column: 1;
+    background-image: url("../img/binnenKijken/img3.jpg");
+  }
+
+  .box5-2 {
+    display: grid;
+    grid-column: 2;
+    background-image: url("../img/binnenKijken/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  footer h3{
+    text-align: center;
+    color: #BE8227;
+  }
+
+}
+
+/*---------------end of medium -------------*/
+
+/*-----------------large---------------*/
+
+@media only screen and (min-width: 800px) {
+
+  nav{
+    width: 100%;
+  }
+
+  nav ul {
+    flex-flow: row;
+  }
+
+  .menutoggle {
+    display: none;
+  }
+
+  .active, .inactive {
+    display: unset;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  /*header*/
+header{
+  height: 100%;
+      background-image: 30%;
+}
+  .container1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .logo {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 40% 20%;
+    text-align: left;
+  }
+
+  .logo h2 {
+    font-size: 90px;
+
+  }
+
+  .openingstijden {
+    width: 65%;
+    grid-column: 2;
+    grid-row: 1;
+    margin: 40% 20%;;
+    height: 42%;
+  }
+
+  /*einde van de header*/
+
+  .container2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .box1 {
+    width: 100%;
+    grid-column: 1 / span 3;
+  }
+
+  .box1-1 {
+    width: 100%;
+    display: grid;
+    grid-column: 4 / span 3;
+    background-image: url("../img/deWinkel/img1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box2 {
+    grid-column: 1 / span 6;
+  }
+
+  .box2-1 {
+    display: grid;
+    grid-column: 1 / span 2;
+  }
+
+  .box2-2 {
+    display: grid;
+    grid-column: 3 / span 2;
+        padding: 5%;
+    background: #BE8227;
+    color: white;
+  }
+
+  .box2-3 {
+    display: grid;
+    grid-column: 5 / span 2;
+    background-image: url("../img/onzeKazen/img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box3 {
+    grid-column: 1 / span 6;
+  }
+
+  .box3-1 {
+    display: grid;
+    grid-column: 1 / span 2;
+          padding: 5%;
+    background: #BE8227;
+    color: white;
+  }
+
+  .box3-2 {
+    display: grid;
+    grid-column: 3 / span 2;
+    background-image: url("../img/kaasRecepten/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box3-3 {
+    display: grid;
+    grid-column: 5 / span 2;
+    background-image: url("../img/kaasRecepten/img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box4 {
+    grid-column: 1 / span 6;
+  }
+
+  .box4-1 {
+    display: grid;
+    grid-column: 1 / span 3;
+  }
+
+  .box4-2 {
+    display: grid;
+    grid-column: 4 / span 3;
+    background-image: url("../img/onsTeam/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box5 {
+    grid-column: 1 / span 6;
+  }
+
+  .box5-1 {
+    display: grid;
+    grid-column: 1 / span 2;
+  }
+
+  .box5-2 {
+    display: grid;
+    grid-column: 3 / span 2;
+    background-image: url("../img/binnenKijken/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .box5-3 {
+    display: grid;
+    grid-column: 5 / span 2;
+    background-image: url("../img/binnenKijken/img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .foot1 {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: 1px solid black;
+  }
+
+  .foot2 {
+    grid-row: 1;
+    border-right: 1px solid black;
+    grid-column: 2;
+  }
+
+  .foot3 {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+
+
+}
